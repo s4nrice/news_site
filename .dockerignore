@@ -1,0 +1,50 @@
+# Игнорировать node_modules, так как они устанавливаются в контейнере
+node_modules
+
+# Игнорировать локальные файлы сборки и кэша
+.next
+dist
+out
+build
+
+# Игнорировать временные файлы и логи
+*.log
+*.log.*
+npm-debug.log*
+yarn-error.log*
+
+# Игнорировать локальные файлы конфигурации и секреты
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Игнорировать файлы редакторов и IDE
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Игнорировать файлы тестов и документации
+__tests__
+*.test.*
+*.spec.*
+coverage
+docs
+
+# Игнорировать временные файлы ОС
+.DS_Store
+Thumbs.db
+
+# Игнорировать файлы, не нужные в продакшене
+README.md
+*.md
+.git
+.gitignore
+.github
+
+
+README.md
+Dockerfile
+.dockerignore
