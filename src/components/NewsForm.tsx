@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import prisma from "@/lib/prisma";
 
 export default function NewsForm() {
     const [title, setTitle] = useState('');
@@ -10,12 +11,21 @@ export default function NewsForm() {
     const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
+
         e.preventDefault();
         await fetch('/api/news', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title, content, image, date: new Date() }),
         });
+        // await prisma.news.create({
+        //     data: {
+        //         title,
+        //         content,
+        //         image,
+        //         date: new Date(),
+        //     },
+        // });
         setTitle('');
         setContent('');
         router.refresh();

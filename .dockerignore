@@ -14,7 +14,7 @@ npm-debug.log*
 yarn-error.log*
 
 # Игнорировать локальные файлы конфигурации и секреты
-.env
+.env.prod
 .env.local
 .env.development
 .env.test

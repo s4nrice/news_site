@@ -1,8 +1,11 @@
+import { unstable_noStore as noStore } from 'next/cache';
 import prisma from '@/lib/prisma';
 import NewsForm from '@/components/NewsForm';
 import NewsList from '@/components/NewsList';
 
 const NewsPage = async () => {
+    noStore();
+
     const news = await prisma.news.findMany({
         orderBy: { date: 'desc' },
     });
