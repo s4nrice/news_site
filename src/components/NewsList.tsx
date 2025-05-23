@@ -7,7 +7,7 @@ type Props = {
 
 export default function NewsList({ news }: Props) {
     return (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="flex flex-col gap-4">
             {news.map((item) => (
                 <NewsCard key={item.id} news={item} />
             ))}

@@ -2,7 +2,6 @@ import { unstable_noStore as noStore } from 'next/cache';
 import prisma from '@/lib/prisma';
 import NewsForm from '@/components/NewsForm';
 import NewsList from '@/components/NewsList';
-import Header from '@/components/Header';
 
 const NewsPage = async () => {
     noStore();
@@ -12,14 +11,12 @@ const NewsPage = async () => {
     });
 
     return (
-        <div className="">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-1">
-                    <NewsForm />
-                </div>
-                <div className="md:col-span-2">
-                    <NewsList news={news} />
-                </div>
+        <div className="w-[70%] h-full mx-auto flex flex-row gap-8">
+            <div className="w-[45%] h-[50vh] flex flex-col items-center">
+                <NewsForm />
+            </div>
+            <div className="w-[55%]">
+                <NewsList news={news} />
             </div>
         </div>
     );

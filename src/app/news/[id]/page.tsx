@@ -21,7 +21,7 @@ const NewsDetailPage: NextPage<Props> = async ({ params }) => {
             <Link href="/news" className="text-blue-100 hover:underline rounded-md p-2 bg-blue-900">
                 Назад
             </Link>
-            <img src={news.image} alt={news.title} className="w-full h-64 object-cover rounded-md my-4" />
+            <img src={news.image} alt={news.title} className="w-full h-80 object-cover rounded-md my-4" />
             <h1 className="text-gray-100 text-2xl font-bold">{news.title}</h1>
             <p className="text-gray-400 my-2">{new Date(news.date).toLocaleDateString()}</p>
             <p className="text-gray-300 whitespace-pre-wrap">{news.content}</p>

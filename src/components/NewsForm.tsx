@@ -24,7 +24,7 @@ export default function NewsForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 border-blue-300 rounded-xl p-4 bg-blue-100">
+        <form onSubmit={handleSubmit} className="w-full h-full flex flex-col gap-4 border-blue-300 rounded-xl p-4 bg-blue-100">
             <h2 className="text-lg font-semibold">Добавить новость</h2>
             <input
                 type="text"
@@ -38,7 +38,7 @@ export default function NewsForm() {
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 placeholder="Содержание"
-                className="border rounded p-2"
+                className="flex-1 border rounded p-2"
                 required
             />
             <input
